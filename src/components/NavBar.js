@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from 'semantic-ui-react'
 import logo from './c.jpg';
-
+import './NavBar.css'
 
 const NavBar = () => {
     return ( 

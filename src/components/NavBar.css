@@ -1,1 +1,6 @@
-
+nav {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav-item {
+  margin: 2rem;
+}
