@@ -3,4 +3,8 @@ nav {
 }
 .nav-item {
   margin: 2rem;
+  height: 4px;
+}
+.navbar-brand {
+  height: 4px;
 }

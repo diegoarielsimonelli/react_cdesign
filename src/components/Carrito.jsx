@@ -3,35 +3,39 @@ import './Carrito.css';
 
 const Carrito = () => {
     const [number,setNumber] = React.useState(0);
-    const[stock,setStock]= React.useState(5)
+let  stock= 5
     const handleCounterUp = () => {
-        setStock(stock- 1)
-        setNumber(number + 1)
         
+        number < stock ? setNumber(number + 1) : alert('No hay más stock.')
 	};
 
 	const handleCounterDown = () => {
-		setStock(stock+ 1)
+		
       setNumber(number - 1)
-        
+      number > 0 ? setNumber(number - 1) : alert('Agrega al menos un producto...')
 	};
     const comprar  = () => {
         alert('Gracias por su compra')
    };
    
-                                    
+
+   
+                 
 
     return (
         <div className="productos">
             <h1>Producto 1</h1>
             <h2 > Cantidad: {number}</h2>  
-            <h2 > Stock: {stock}</h2>
             <button onClick={handleCounterUp}>+</button>
             <button onClick={handleCounterDown}>-</button>
             <button onClick={comprar}>Comprar</button>
+            
+        
+
+            
         
             
-      </div>
+        </div>
   )
     
 }

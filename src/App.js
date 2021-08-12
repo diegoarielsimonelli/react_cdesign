@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
-        <Carrito />
+        <Carrito stock={5}  />
       </div>
     );
   }
