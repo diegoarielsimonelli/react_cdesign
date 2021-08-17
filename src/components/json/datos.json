@@ -1,0 +1,34 @@
+[        
+            {
+               "id":1,
+             "nombre":"Cuaderno A4",
+             "precio":750,
+             "img":"img/cuaderno-a4.png"
+             
+             }, {
+                "id":2,
+             "nombre":"Cuaderno A5",
+             "precio":650,
+             "img":"img/cuaderno-a5.png"
+             }, {
+               "id":3,
+             "nombre":"Cuaderno A6",
+             "precio":500,
+             "img":"img/cuaderno-a6.png"
+             }, {
+                "id":4,
+             "nombre":"Anotador",
+             "precio":150,
+             "img":"img/anotador.png"
+             }, {
+                "id":5,
+             "nombre":"Agenda",
+             "precio":500,
+             "img":"img/agenda.png"
+             }, {
+                "id":6,
+             "nombre":"Cuaderno Temático",
+             "precio":750,
+             "img":"img/tematico.png"
+             } 
+]

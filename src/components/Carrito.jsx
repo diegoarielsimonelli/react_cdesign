@@ -11,7 +11,7 @@ let  stock= 5
 
 	const handleCounterDown = () => {
 		
-      setNumber(number - 1)
+      
       number > 0 ? setNumber(number - 1) : alert('Agrega al menos un producto...')
 	};
     const comprar  = () => {
