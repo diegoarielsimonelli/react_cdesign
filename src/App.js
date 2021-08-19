@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Header from './components/Header';
 import Carrito from './components/Carrito';
 import ItemList from './components/ItemList';
+import ItemDetailContainer from './components/ItemDetail';
 
 class App extends Component {
   render() {
@@ -16,9 +17,12 @@ class App extends Component {
         <Carrito stock={5}  />
         <ItemList />
         
+        <ItemDetailContainer />
+        
+        
       </div>
     );
   }
-}
+} 
 
 export default App;

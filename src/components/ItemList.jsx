@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Card, Image } from 'semantic-ui-react';
 import './ItemList.css';
 
+
 const ItemList = () => {
     const [users, setUsers] = useState([]);
-    console.log("Users", users);
+    
    
     useEffect(() => {
       fetch("https://picsum.photos/v2/list")
         .then((response) => response.json())
         .then((data) => setUsers(data));
+        
     }, []);
   
     return (
