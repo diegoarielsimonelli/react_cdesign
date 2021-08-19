@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Header from './components/Header';
 import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
+import ItemList from './components/ItemList';
 class App extends Component {
   render() {
     return (
@@ -14,6 +14,7 @@ class App extends Component {
         <NavBar />
         <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
         <Carrito stock={5}  /> 
+        <ItemList />
         <ItemDetailContainer />
       
         
