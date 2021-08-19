@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ItemDetail from './components/ItemDetail';
-import Spinner from './components/Spinner';
+import ItemDetail from './ItemDetail';
+import Spinner from './Spinner';
 
 const ItemDetailContainer = () => {
     const [productos, setProductos] = useState([]);
