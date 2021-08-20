@@ -14,12 +14,24 @@ const ItemDetailContainer = () => {
           setIsLoading(false);
             },6000);
     }, []);
+    
+
     return (
-        <div>
-            { IsLoading ? <Spinner />: <ItemDetail productos={{productos}}  />}
-        </div>
-    )
-}
+      <> {IsLoading === false ? (
+          <div >
+              {productos.map((productos) => {
+                  return <ItemDetail  productos={{productos}} />
+              })}
+      </div>
+      ) : <Spinner />}
+      </>
+  );
+};
+          
+
+  
+  
+
 
 export default ItemDetailContainer
 
