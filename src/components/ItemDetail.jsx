@@ -2,22 +2,25 @@ import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 
 const ItemDetail = ({p}) => {
+ 
+ return<>
 
-      <div>
-
-    <Card  key={p.id}>
+    <Card  >
       <Image src= {p.image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{p.title} </ Card.Header>
-        < Card.Meta>|
-            <strong><span > USD {p.price}</span></strong> 
+        < Card.Meta>
+            <span >  {p.price}</span>
           </Card.Meta>
           <Card.Description>
           {p.description}
           </Card.Description>
       </Card.Content>
     </Card> 
-      </div>
+  </>
+  
+
+     
 
   
   

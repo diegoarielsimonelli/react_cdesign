@@ -14,10 +14,9 @@ class App extends Component {
         <NavBar />
         <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
         <Carrito stock={5}  /> 
-        <ItemList />
-        <ItemDetailContainer />
+         {/* <ItemList /> 
+        <ItemDetailContainer /> */}
       
-        
       </div>
     );
   }

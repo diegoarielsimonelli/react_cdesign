@@ -1,16 +1,17 @@
 import React from 'react'
 import { Icon } from 'semantic-ui-react'
-import logo from './c.jpg';
+import CardWidget  from './CardWidget';
 import './NavBar.css'
 
 const NavBar = () => {
+    
     return ( 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-  
-    <img src={logo} alt='logo c' width='200px' height='200px' /><a className="navbar-brand" href>C-Design</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+    <CardWidget width='200px' height='200px' className="m-3" /><a className="navbar-brand m-3" >C-Design</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
@@ -28,12 +29,11 @@ const NavBar = () => {
 </nav>
     
         
-      
-    
-    ) 
+) 
     
   
   ;
+    
   };
   
   export default NavBar;

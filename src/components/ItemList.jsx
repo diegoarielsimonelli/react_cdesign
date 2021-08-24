@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Card, Image } from 'semantic-ui-react';
 import './ItemList.css';
-
+import Item from './Item';
 
 const ItemList = () => {
     const [users, setUsers] = useState([]);
@@ -19,14 +18,8 @@ const ItemList = () => {
          <h1>Nuestro Staff</h1>
          {users.map((user) => {
           return (
-            
-          <Card  key={user.id}>
-            <Image src= {user.download_url} wrapped ui={false} />
-            <Card.Content>
-              <Card.Header>{user.author} </ Card.Header>
-              
-            </Card.Content>
-          </Card>
+            <Item key={user.id} user={user}></Item>
+          
           );
         })}
       </div>

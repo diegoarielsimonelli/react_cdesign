@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     const [ IsLoading, setIsLoading]=useState(true);
    
     useEffect(() => {
-      fetch("https://fakestoreapi.com/products")
+      fetch("https://fakestoreapi.com/products/")
         .then((response) => response.json())
         .then((data) => setProductos(data));
         setTimeout(()=>{
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
       <> {IsLoading === false ? (
           <div >
               {productos.map((productos) => {
-                  return <ItemDetail  productos={{productos}} />
+                  return <ItemDetail key={productos.id}  p={productos} />
               })}
       </div>
       ) : <Spinner />}
