@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+// import { Card, Image } from 'semantic-ui-react';
 
 const ItemDetail = ({p}) => {
  
  return<>
-
-    <Card  >
+<h4>{p.title}</h4>
+    {/* <Card  >
       <Image src= {p.image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{p.title} </ Card.Header>
@@ -16,7 +16,7 @@ const ItemDetail = ({p}) => {
           {p.description}
           </Card.Description>
       </Card.Content>
-    </Card> 
+    </Card>  */}
   </>
   
 

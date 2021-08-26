@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import './ItemList.css';
 import Item from './Item';
-
+import {useParams} from 'react-router-dom'
 const ItemList = () => {
     const [users, setUsers] = useState([]);
-    
+    const {categoryId}= useParams()
    
     useEffect(() => {
-      fetch("https://picsum.photos/v2/list")
+      fetch(`https://fakestoreapi.com/products/${categoryId}`)
         .then((response) => response.json())
-        .then((data) => setUsers(data));
+        .then((data) => setUsers(data.filter(e=>e.category === categoryId)));
         
-    }, []);
+    }, [categoryId]);
   
     return (
       <div className="card">
-         <h1>Nuestro Staff</h1>
-         {users.map((user) => {
+         <h1>{categoryId}</h1>
+         {users.map((item) => {
           return (
-            <Item key={user.id} user={user}></Item>
-          
+            <Item key={item.id} user={item}></Item>
+            
           );
         })}
       </div>
