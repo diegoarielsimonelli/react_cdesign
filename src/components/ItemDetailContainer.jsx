@@ -7,9 +7,11 @@ const ItemDetailContainer = () => {
     const [ IsLoading, setIsLoading]=useState(true);
     const {itemId}= useParams()
     useEffect(() => {
-      fetch(`https://fakestoreapi.com/products/${itemId}`)
+      fetch(`https://fakestoreapi.com/products/`)
         .then((response) => response.json())
-        .then((data) => setProductos(data));
+        .then((data) => {
+          itemId ? setProductos(data.filter(e=>e.item === itemId)):setProductos(data)
+          setProductos(data)
         setTimeout(()=>{
           setIsLoading(false);
             },2000);
@@ -25,7 +27,7 @@ const ItemDetailContainer = () => {
       </div>
       ) : <Spinner />}
       </>
-  );
+      )});
 };
           
 

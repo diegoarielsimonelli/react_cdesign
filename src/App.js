@@ -28,11 +28,11 @@ class App extends Component {
           
       <Route exact path="/">
             <h2>Item List</h2>
-            <ItemList greeting="Hola Coders" a={4} b="chau" />
+            <ItemList  />
           </Route>
           <Route path="/category/:categoryId">
             <h2>Item List</h2>
-            <ItemList greeting="Hola Coders" a={4} b="chau" />
+            <ItemList  />
           </Route>
           <Route path="/item/:itemId">
                 <h2>Item Detail</h2>
