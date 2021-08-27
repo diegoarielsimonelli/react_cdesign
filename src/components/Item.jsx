@@ -1,21 +1,21 @@
 import React from 'react'
-import { Card } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 
 
-const Item = ({item}) => {
+const Item = ({array}) => {
  
     return <>
-        
-             <Card  >
-            {/* <Image src= {item.image} wrapped ui={false} /> */}
+       {/* <h1>{array.title} </h1> */}
+              <Card  >
+             <Image src= {array.image} wrapped ui={false} /> 
              <Card.Content>
-               <Card.Header>{item.title} </ Card.Header>
+               <Card.Header>{array.title} </ Card.Header>
                <Card.Description>
-               {item.description} 
+               {array.description} 
                </Card.Description>
             </Card.Content>
-          </Card> 
-        
+          </Card>  
+         
         </>
 }
 

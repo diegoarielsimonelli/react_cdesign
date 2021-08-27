@@ -16,7 +16,7 @@ const NavBar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
-      <Link to="/category/electronics">  <li className="nav-item">
+      <Link to="/">  <li className="nav-item">
          
           <Icon link color='red' name='cart'/>
         </li></Link>  
@@ -25,6 +25,15 @@ const NavBar = () => {
         </li></Link>  
         <Link to="/category/men's clothing"> <li className="nav-item">
         <Icon link color='blue' name='coffee'/>
+        
+        </li></Link>
+        <Link to="/category/women's clothing"> <li className="nav-item">
+        <Icon link color='black' name='coffee'/>
+        
+        </li></Link>
+        <Link to="/category/electronics"> <li className="nav-item">
+        <Icon link color='green' name='coffee'/>
+        
         </li></Link>
       </ul>
     </div>
