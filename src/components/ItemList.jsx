@@ -25,7 +25,7 @@ const ItemList = () => {
     return (
         <>
             {IsLoading === false ? (
-                <div className='divCardContainer'>
+                <div >
                     {products.map((e) => {
                         return (
                             <div key={e.id}>

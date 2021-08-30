@@ -21,25 +21,29 @@ const NavBar = () => {
           <Icon link color='red' name='cart'/>
         </li></Link>  
        <Link to="/category/jewelery">  <li className="nav-item">
-        <Icon link color='red' name='coffee'/>
+        <Icon link color='red' name='chess queen'/>
         </li></Link>  
         <Link to="/category/men's clothing"> <li className="nav-item">
-        <Icon link color='blue' name='coffee'/>
+        <Icon link color='blue' name='mars'/>
         
         </li></Link>
         <Link to="/category/women's clothing"> <li className="nav-item">
-        <Icon link color='black' name='coffee'/>
+        <Icon link color='black' name='venus'/>
         
         </li></Link>
         <Link to="/category/electronics"> <li className="nav-item">
-        <Icon link color='green' name='coffee'/>
+        <Icon link color='green' name='tablet'/>
         
         </li></Link>
+        <Link to="/Cart">  <li className="nav-item">
+         
+          <Icon link color='grey' name='cart plus'/>
+        </li></Link>  
       </ul>
     </div>
   </div>
 </nav>
-    
+   
         
 ) 
     

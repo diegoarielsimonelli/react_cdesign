@@ -8,3 +8,7 @@ nav {
 .navbar-brand {
   height: 4px;
 }
+
+.nav-item {
+  width: 4rem;
+}

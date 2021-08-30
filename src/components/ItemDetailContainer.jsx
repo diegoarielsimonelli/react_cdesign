@@ -7,17 +7,17 @@ import Loading from "./Spinner";
 import {  useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    // let id = match.params.id;
+    
     const { ItemId} = useParams()
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     
-    
+    console.log(typeof ItemId)
 
     useEffect(() => {
         axios("https://fakestoreapi.com/products/").then((res) => {
             ItemId
-                ? setData(res.data.filter((e) => e.id === ItemId))
+                ? setData(res.data.find(((e) => e.id === parseInt(ItemId))))
                 : setData(res.data);
         });
         setTimeout(() => {

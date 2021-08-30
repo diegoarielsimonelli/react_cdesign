@@ -5,10 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./components/NavBar";
 import NavBar from "./components/NavBar";
 import Header from './components/Header';
-import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemList from './components/ItemList';
-
+import Cart from "./components/Cart";
 
 
 class App extends Component {
@@ -20,7 +19,7 @@ class App extends Component {
         <NavBar />
         
         <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
-        <Carrito stock={5}  /> 
+       
          {/* <ItemList /> 
         <ItemDetailContainer /> */}
         
@@ -34,10 +33,11 @@ class App extends Component {
             <h2>Item List</h2>
             <ItemList  />
           </Route>
-          <Route path="/item/:itemId">
+          <Route path="/item/:ItemId">
                 <h2>Item Detail</h2>
             <ItemDetailContainer></ItemDetailContainer>
           </Route>
+          <Route path='/Cart' component={Cart} />
         </Switch>  
       </div>
       </Router>
