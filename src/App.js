@@ -8,11 +8,12 @@ import Header from './components/Header';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemList from './components/ItemList';
 import Cart from "./components/Cart";
-
+import { CartProvider } from "./components/CartContext/CartContext";
 
 class App extends Component {
   render() {
     return (
+      <CartProvider>
       <Router>
 
       <div className="App">
@@ -20,8 +21,7 @@ class App extends Component {
         
         <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
        
-         {/* <ItemList /> 
-        <ItemDetailContainer /> */}
+         
         
       <Switch>
           
@@ -41,6 +41,7 @@ class App extends Component {
         </Switch>  
       </div>
       </Router>
+      </CartProvider>
     );
   }
 } 

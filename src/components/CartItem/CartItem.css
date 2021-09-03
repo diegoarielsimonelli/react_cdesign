@@ -1,0 +1,12 @@
+.card-cart {
+  padding: 2rem;
+}
+
+.card-cart p {
+  font-size: 1rem;
+}
+
+.img-cart-item {
+  max-width: 13rem;
+  min-width: 7rem;
+}
