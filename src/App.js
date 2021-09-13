@@ -1,49 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
+import "./App.css";
+//components
+import NavBar from "./components/NavBar/NavBar";
+import "./components/NavBar/NavBar.css";
+import Footer from "./views/Footer/Footer";
+//Views
+import Home from "./views/Home/Home";
+import Contact from "./views/Contact/Contact";
+import About from "./views/About/About";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
+//React-Router-DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Cart from "./components/Cart/Cart";
+//Context
+import { CartProvider } from "./components/CartContext/CartContext.jsx";
+// //Firebase
+// import { db } from "./firebase";
 
-// Components!
-import "./components/NavBar";
-import NavBar from "./components/NavBar";
-import Header from './components/Header';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemList from './components/ItemList';
-import Cart from "./components/Cart";
-import { CartProvider } from "./components/CartContext/CartContext";
-
-class App extends Component {
-  render() {
-    return (
-      <CartProvider>
+const App = () => {
+  return (
+    <CartProvider>
       <Router>
-
-      <div className="App">
-        <NavBar />
-        
-        <Header title='Bievenidos a C-Design' subtitle='Elegí el cuaderno a tu medida!'/>
-       
-         
-        
-      <Switch>
-          
-      <Route exact path="/">
-            <h2>Item List</h2>
-            <ItemList  />
-          </Route>
-          <Route path="/category/:categoryId">
-            <h2>Item List</h2>
-            <ItemList  />
-          </Route>
-          <Route path="/item/:ItemId">
-                <h2>Item Detail</h2>
-            <ItemDetailContainer></ItemDetailContainer>
-          </Route>
-          <Route path='/Cart' component={Cart} />
-        </Switch>  
+        <div className='App'>
+        <NavBar/>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/Category/:categoryId' component={ItemListContainer} />
+            <Route path='/Item/:id' component={ItemDetailContainer} />
+            <Route path='/About' component={About} />
+            <Route path='/Contact' component={Contact} />
+            <Route path='/Cart' component={Cart} />
+          </Switch>
+          <Footer />
       </div>
       </Router>
-      </CartProvider>
+    </CartProvider>
     );
   }
-} 
-
 export default App;
