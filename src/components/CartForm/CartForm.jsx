@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import db from "../firebase/firebase";
-
+import { db } from "../../firebase/firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { useCartContext } from "../CartContext/CartContext";
 

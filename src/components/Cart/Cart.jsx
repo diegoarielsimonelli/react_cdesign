@@ -3,7 +3,7 @@ import { useCartContext } from "../CartContext/CartContext";
 //
 import { Link } from "react-router-dom";
 //import components
-import CartForm from "../../CartForm/CartForm";
+import CartForm from "../CartForm/CartForm";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
@@ -13,7 +13,7 @@ const Cart = () => {
     <>
       <div className="cart-section-container">
         <section className="main-cart-section">
-          <h1>Mi carrito de compras</h1>
+          <h1>Mi carrito </h1>
           <p>Tienes {totalItems} productos en el carrito</p>
           {totalItems > 0 ? (
             <>
@@ -49,9 +49,9 @@ const Cart = () => {
                 className="mt-5"
                 style={{ fontWeight: "800", fontSize: "x-large" }}
               >
-                Tu carrito está vacío! <br></br>Buscá lo que quieras en nuestros
+                ¡Tu carrito está vacío! <br></br>Buscá en nuestros...
                 <Link to="/" style={{ textDecoration: "none" }}>
-                  productos
+                  PRODUCTOS
                 </Link>
               </p>
             </>

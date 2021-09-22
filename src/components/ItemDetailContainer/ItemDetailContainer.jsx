@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 //compoenentes
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/Loading";
 //Firebase
 import { getDoc, doc } from "firebase/firestore";
-import db from "../../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {

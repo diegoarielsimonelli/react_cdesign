@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 import { Link, useParams } from "react-router-dom";
 //Firebase
 import { collection, getDocs } from "firebase/firestore";
-import db from "../../firebase/firebase";
+import { db } from "../../firebase/firebase";
 
 const ItemList = () => {
   const { categoryId } = useParams();
