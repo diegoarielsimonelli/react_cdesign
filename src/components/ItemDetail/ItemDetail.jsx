@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,7 +9,7 @@ import { Button } from "react-bootstrap";
 import { Card, Image } from "semantic-ui-react";
 import { useCartContext } from "../CartContext/CartContext";
 
-const ItemDetail = ({ Item }) => {
+const ItemDetail = ({Item }) => {
   const [product, setProduct] = useState(0);
 
   const { addItemCart } = useCartContext();
@@ -26,7 +28,9 @@ const ItemDetail = ({ Item }) => {
           <img
             className="itemDeailImg"
             src={Item.image}
-            alt=" {Item.title}"
+            alt="{ Item.title}"
+
+
           ></img>
           <p>
             <b>Descripcion: </b> {Item.description}

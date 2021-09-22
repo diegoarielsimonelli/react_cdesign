@@ -1,10 +1,13 @@
 import React from "react";
 import { useCartContext } from "../CartContext/CartContext";
+//
 import { Link } from "react-router-dom";
+//import components
+import CartForm from "../../CartForm/CartForm";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-  const { cart, clear, totalItems } = useCartContext();
+  const { cart, clear, totalItems, totalPrice } = useCartContext();
 
   return (
     <>
@@ -14,8 +17,11 @@ const Cart = () => {
           <p>Tienes {totalItems} productos en el carrito</p>
           {totalItems > 0 ? (
             <>
-              <button onClick={clear} className="btn btn-info button-clear">
-                Vaciar Carrito
+              <button
+                onClick={clear}
+                className="btn btn-info button-clear border-light"
+              >
+                Limpiar Carrito
               </button>
               <div className="cart-items">
                 <div className="table-responsive container-cart-item pt-3">
@@ -43,12 +49,28 @@ const Cart = () => {
                 className="mt-5"
                 style={{ fontWeight: "800", fontSize: "x-large" }}
               >
-                ¡Tu carrito está vacío! Agregá nuestros
-                <Link to="/" className="productos">
-                  PRODUCTOS
+                Tu carrito está vacío! <br></br>Buscá lo que quieras en nuestros
+                <Link to="/" style={{ textDecoration: "none" }}>
+                  productos
                 </Link>
               </p>
             </>
+          )}
+          {totalItems > 0 && (
+            <div className="col-lg-4 col-md">
+              <p
+                style={{
+                  fontWeight: "800",
+                  fontSize: "x-large",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Precio Total: ${totalPrice}
+              </p>
+              <div className="mr-lg-5">
+                <CartForm />
+              </div>
+            </div>
           )}
         </section>
       </div>
@@ -57,49 +79,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-// import React, { useContext } from "react";
-// import "./Cart.css";
-
-// //import components
-// import CartItem from "./CartItem/CartItem";
-// import { CartContext } from "./CartContext/CartContext";
-
-// const Cart = () => {
-//   const { cart, clear } = useContext(CartContext);
-
-//   return (
-//     <div className="cart-section-container">
-//       <header>{/* Botón continuar comprando que lleve al home  */}</header>
-//       <section className="main-cart-section">
-//         <h1>Shopping Cart</h1>
-//         <p>Tu tienes X items en el Cart</p>
-//         <button onClick={clear} className="btn btn-info button-clear">
-//           Limpiar
-//         </button>
-//         <div className="cart-items">
-//           <div className="table-responsive container-cart-item pt-3">
-//             <table className="table ">
-//               <thead>
-//                 <tr>
-//                   <th className="col-3">Imagen</th>
-//                   <th className="col-2">Articulo</th>
-//                   <th className="col-1 text-center">Precio</th>
-//                   <th className="col-2 text-center">Cantidad</th>
-//                   <th className="col-1 text-center">Total</th>
-//                   <th className="col-1 text-center">Borrar</th>
-//                 </tr>
-//               </thead>
-
-//               {cart.map((item) => {
-//                 return <CartItem dataItem={item} key={item.id}  />;
-//               })}
-//             </table>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Cart;

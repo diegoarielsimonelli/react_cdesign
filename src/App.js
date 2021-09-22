@@ -16,8 +16,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Cart from "./components/Cart/Cart";
 //Context
 import { CartProvider } from "./components/CartContext/CartContext.jsx";
-// //Firebase
-// import { db } from "./firebase";
+
+
 
 const App = () => {
   return (
