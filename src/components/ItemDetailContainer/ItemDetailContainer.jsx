@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-//compoenentes
+//componentes
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/Loading";
 //Firebase
@@ -13,15 +12,14 @@ const ItemDetailContainer = () => {
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  const obtenerDatos = async () => {
-    const docRef = doc(db, "products", Id);
-    const docSnap = await getDoc(docRef);
-    console.log(docSnap.id);
-    setData({ ...docSnap.data(), id: docSnap.id });
-  };
-
   useEffect(() => {
+    const obtenerDatos = async () => {
+      const docRef = doc(db, "products", Id);
+      const docSnap = await getDoc(docRef);
+      console.log(docSnap.id);
+      setData({ ...docSnap.data(), id: docSnap.id });
+    };
+
     obtenerDatos();
     setTimeout(() => {
       setIsLoading(false);

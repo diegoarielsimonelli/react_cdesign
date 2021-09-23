@@ -1,19 +1,19 @@
 # C-Design
 
-Es un simulador de e-commerce Se trata de un polirubro que venden abundante y variada mercadería de fabricación nacional
-
-## Novedades
-
-Todas las semanas renovamos el stock.
+Es un simulador de un e-commerce, venta de cuadernos y agendas.
 
 # Librerias que use en el proyecto:
 
 - react ^17.0.2
-- react-router-dom
-- react-bootstrap
-- semantic-UI
-- Axios
-- Prop-types
+- react-router-dom ^5.2.0
+- react-bootstrap ^2.0.0-beta.6
+- react-hook-form ^7.15.3
+- semantic-UI ^2.0.3
+- axios ^0.21.1
+- prop-types ^15.7.2
+- firebase ^9.0.2
+- bootstrap ^5.1.0
+- eslint ^7.32.0
 
 ## Version
 

@@ -3,7 +3,7 @@ import { useCartContext } from "../CartContext/CartContext";
 
 const CartItem = ({ dataItem }) => {
   const { removeItem } = useCartContext();
-  console.log(dataItem.id);
+
   const PrecioTotal = (precio, cantidad) => {
     return precio * cantidad;
   };

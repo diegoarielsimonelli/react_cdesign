@@ -37,7 +37,7 @@ const Cart = () => {
                       </tr>
                     </thead>
                     {cart.map((e) => {
-                      return <CartItem Item={e} key={e.id} />;
+                      return <CartItem dataItem={e} key={e.id} />;
                     })}
                   </table>
                 </div>
