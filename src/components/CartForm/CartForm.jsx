@@ -97,7 +97,8 @@ const CartForm = () => {
       </Form>
       {numDeCompra !== "" && (
         <h3 className="h3">
-          ¡Gracias por elegirnos! Este es su código de compra: {numDeCompra}
+          ¡¡Compra exitosa!! ¡Gracias por elegirnos! Este es su código de
+          compra: {numDeCompra}
         </h3>
       )}
     </>
